@@ -2,7 +2,7 @@
 
 namespace Jianminlee\Logistics\Channel;
 
-use Jianminlee\Traits\Config;
+use Jianminlee\Logistics\Traits\Config;
 
 /**
  * 极速数据物流查询.

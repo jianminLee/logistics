@@ -2,7 +2,7 @@
 
 namespace Jianminlee\Logistics;
 
-use Jianminlee\Traits\Config;
+use Jianminlee\Logistics\Traits\Config;
 use Wythe\Logistics\Exceptions\InvalidArgumentException;
 use Wythe\Logistics\Exceptions\NoQueryAvailableException;
 

@@ -2,7 +2,7 @@
 
 namespace Jianminlee\Logistics\Channel;
 
-use Jianminlee\Traits\Config;
+use Jianminlee\Logistics\Traits\Config;
 
 class IckdChannel extends \Wythe\Logistics\Channel\IckdChannel
 {

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Jianminlee\Traits;
+namespace Jianminlee\Logistics\Traits;
 
 
 trait Config

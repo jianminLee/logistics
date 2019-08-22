@@ -2,7 +2,7 @@
 
 namespace Jianminlee\Logistics\Channel;
 
-use Jianminlee\Traits\Config;
+use Jianminlee\Logistics\Traits\Config;
 
 /**
  * 数据智汇 查询物流接口.

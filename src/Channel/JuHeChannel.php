@@ -1,7 +1,7 @@
 <?php
 namespace Jianminlee\Logistics\Channel;
 
-use Jianminlee\Traits\Config;
+use Jianminlee\Logistics\Traits\Config;
 
 /**
  * 聚合数据 查询物流接口.
