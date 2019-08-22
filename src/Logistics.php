@@ -13,6 +13,11 @@ class Logistics extends \Wythe\Logistics\Logistics
 {
     use Config;
 
+    public function __construct()
+    {
+        $this->factory = new Factory();
+    }
+
     /**
      * 通过接口获取物流信息.
      *
