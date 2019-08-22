@@ -1,0 +1,26 @@
+{
+    "name": "jianminlee/logistics",
+    "description": "A logistics SDK.From uuk020/logistics.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lijianmin",
+            "email": "lijianmin520@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jianminlee\\Logistics\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jianminlee\\Logistics\\ServiceProvider"
+            ]
+        }
+    }
+}
