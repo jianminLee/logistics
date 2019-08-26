@@ -1,13 +1,12 @@
 <?php
-
 namespace Jianminlee\Logistics\Channel;
 
 use Jianminlee\Logistics\Traits\Config;
 
 /**
- * 极速数据物流查询.
+ * 聚合数据 查询物流接口.
  */
-class JiSuChannel extends \Wythe\Logistics\Channel\JiSuChannel
+class JuheChannel extends \Wythe\Logistics\Channel\JuHeChannel
 {
     use Config;
 }

@@ -5,9 +5,9 @@ namespace Jianminlee\Logistics\Channel;
 use Jianminlee\Logistics\Traits\Config;
 
 /**
- * 快递鸟查询物流接口.
+ * 极速数据物流查询.
  */
-class KuaiDiBirdChannel extends \Wythe\Logistics\Channel\KuaiDiBirdChannel
+class JisuChannel extends \Wythe\Logistics\Channel\JiSuChannel
 {
     use Config;
 }
