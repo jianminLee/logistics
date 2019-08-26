@@ -29,8 +29,14 @@ class Logistics extends \Wythe\Logistics\Logistics
      * @throws InvalidArgumentException
      * @throws NoQueryAvailableException
      */
-    public function get(string $code, string $company = '', $channels = null): array
+    public function get(string $code, string $company = '', $channels = null) : array
     {
+        if(\config('logistics.cache.use')){
+            return \Cache::tags($this->logisticsCacheTagName())
+                ->remember(get_class() . $code, now()->addMinutes(config('logistics.cache.expire')), function () use ($code,$company, $channels) {
+                    return $this->query($code, $channels ?? \config('logistics.provider'), $company);
+                });
+        }
         return $this->query($code, $channels ?? \config('logistics.provider'), $company);
     }
 
@@ -46,8 +52,27 @@ class Logistics extends \Wythe\Logistics\Logistics
      * @throws InvalidArgumentException
      * @throws NoQueryAvailableException
      */
-    public function getByProxy(array $proxy, string $code, string $company = '', $channels = null): array
+    public function getByProxy(array $proxy, string $code, string $company = '', $channels = null) : array
     {
         return $this->queryByProxy($proxy, $code, $channels ?? \config('logistics.provider'), $company);
+    }
+
+    public function logisticsCacheTagName()
+    {
+        return \config('logistics.cache.tag_name');
+    }
+
+    /**
+     * 清除缓存
+     *
+     * @param string $express_no
+     *
+     * @return bool
+     */
+    public function forgetLogisticsCache(string $express_no = ''){
+        if( !$express_no){
+            return \Cache::tags($this->logisticsCacheTagName())->flush();
+        }
+        return \Cache::tags($this->logisticsCacheTagName())->forget($express_no);
     }
 }
