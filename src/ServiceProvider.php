@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Jianminlee\Logistics;;
+namespace Jianminlee\Logistics;
 
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
